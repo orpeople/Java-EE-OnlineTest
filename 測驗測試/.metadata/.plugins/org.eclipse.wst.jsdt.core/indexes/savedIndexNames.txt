@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\楊子毅\Desktop\巨匠專門\社團影片\社團範例\測驗測試\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+999687989.index
+2713191461.index
+1139849251.index
+2372588554.index
+1829244840.index
+2874394570.index

@@ -1,0 +1,51 @@
+package com.mrkj.ygl.servlet3.system;
+
+import java.io.IOException;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.mrkj.ygl.entity.UserInfo;
+import com.mrkj.ygl.service.SystemService;
+
+/***
+ * 
+ * 该类负责用户注册
+ *
+ */
+
+@WebServlet(urlPatterns = "/sysregister", asyncSupported = false)
+public class SystemRegister extends HttpServlet {
+
+	private static final SystemService systemService = new SystemService();//系统服务
+
+	@SuppressWarnings("unused")
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		String username = req.getParameter(UserInfo.username.toString());
+		String password = req.getParameter(UserInfo.password.toString());
+		String fullname = req.getParameter(UserInfo.fullname.toString());
+		String email = req.getParameter(UserInfo.email.toString());
+		Map<String, Object> userInfoMap = systemService.selectUserInfoByusername(username);
+		if (userInfoMap != null) {
+			String getUsername = (String) userInfoMap.get(UserInfo.username.toString());
+			if (getUsername != null) {
+				resp.sendRedirect("login.jsp?msg=3");//表示已经注册
+			} else {
+
+				int returnValue = systemService.insert(username, password, fullname, email);
+				if (returnValue == 1) {					//表示注册成功
+					resp.sendRedirect("login.jsp");
+				} else {
+					resp.sendRedirect("login.jsp?msg=2");//表示注册失败
+				}
+			}
+		}
+	}
+
+}

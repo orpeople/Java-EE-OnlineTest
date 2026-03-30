@@ -1,0 +1,8 @@
+127.0.0.1 - - [26/Mar/2026:14:56:05 +0800] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [26/Mar/2026:14:56:07 +0800] "GET /OnlineExam/login.jsp HTTP/1.1" 200 8365
+0:0:0:0:0:0:0:1 - - [26/Mar/2026:14:56:07 +0800] "GET /OnlineExam/bootstrap-3.3.5-dist/js/jquery-1.11.3.min.js HTTP/1.1" 200 95957
+0:0:0:0:0:0:0:1 - - [26/Mar/2026:14:56:07 +0800] "GET /OnlineExam/bootstrap-3.3.5-dist/css/bootstrap.min.css HTTP/1.1" 200 139992
+0:0:0:0:0:0:0:1 - - [26/Mar/2026:14:56:07 +0800] "GET /OnlineExam/bootstrap-3.3.5-dist/js/bootstrap.min.js HTTP/1.1" 200 36816
+0:0:0:0:0:0:0:1 - - [26/Mar/2026:14:56:07 +0800] "GET /OnlineExam/proJs/login.js?v=0.55 HTTP/1.1" 200 1361
+0:0:0:0:0:0:0:1 - - [26/Mar/2026:14:56:07 +0800] "GET /OnlineExam/bootstrap-3.3.5-dist/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+0:0:0:0:0:0:0:1 - - [26/Mar/2026:14:56:09 +0800] "GET /favicon.ico HTTP/1.1" 404 763
